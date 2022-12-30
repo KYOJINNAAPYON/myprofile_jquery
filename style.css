@@ -193,7 +193,7 @@ footer p {
     transition: all 500ms;
 }
 
-.fadein {
+section.fadein {
     opacity: 1;
     transform: translate(0);
 }
