@@ -67,7 +67,7 @@ $(function () {
   });
 
   // モーダル
-  $('.item a').click(function() {
+  $('.works img').click(function() {
     const imgSrc = $(this).attr('src');
     $('.bigimg').attr('src', imgSrc);
     $('.modal').fadeIn();
