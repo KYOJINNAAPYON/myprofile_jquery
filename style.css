@@ -187,18 +187,13 @@ footer p {
     transition: all 500ms;
 }
 
-.about-fadein {
-    opacity: 1;
-    transform: translate(0);
-}
-
 .works {
     opacity: 0;
     transform: translate(0, 50px);
     transition: all 500ms;
 }
 
-.works-fadein {
+.fadein {
     opacity: 1;
     transform: translate(0);
 }

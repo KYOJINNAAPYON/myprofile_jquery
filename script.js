@@ -54,16 +54,11 @@ $(function () {
       $('.about').each(function(){
         const targetPosition = $(this).offset().top;
         if (scroll > targetPosition - windowHeight + 100) {
-          $(this).addClass("about-fadein");
+          $(this).addClass('section .fadein');
         }
     });
 
-    $('.works').each(function(){
-      const targetPosition = $(this).offset().top;
-      if (scroll > targetPosition - windowHeight + 50) {
-        $(this).addClass("works-fadein");
-      }
-    });
+    
   });
 
   // モーダル
