@@ -46,18 +46,6 @@ $(function () {
       return false;
     });
 
-    // セクションフェードイン
-    $(window).scroll(function(){
-      const windowHeight = $(window).height();
-      const scroll = $(window).scrollTop();
-
-      $('section').each(function(){
-        const targetPosition = $(this).offset().top;
-        if (scroll > targetPosition - windowHeight + 100) {
-          $(this).addClass('section .fadein');
-        }
-    });
-  });
 
   // モーダル
   $('.works img').click(function() {
@@ -71,4 +59,18 @@ $(function () {
     $('.modal').fadeOut();
     return false
   });
+
+  // セクションフェードイン
+  $(window).scroll(function(){
+    const scroll = $(window).scrollTop();
+    const windowHeight = $(window).height();
+    
+    $('section').each(function(){
+      const position = $(this).offset().top;
+      if (scroll > position - windowHeight + 100) {
+        $(this).addClass("fadein");
+      }
+  });
+});
+
   });

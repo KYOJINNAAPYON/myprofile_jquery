@@ -82,7 +82,6 @@ img {
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     margin: 20px auto 20px auto;
     max-width: 960px;
 }
@@ -118,43 +117,6 @@ img {
     width: 25%;
 }
 
-.item a:hover {
-    opacity: 0.8;
-}
-
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: none;
-    background-color:rgba(0, 0, 0, 0.8);
-}
-
-.bigimg {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 80%;
-    max-width: 800px;
-    margin: auto;
-}
-
-
-
-.close-btn {
-    color: white;
-    font-size: 40px;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    text-decoration: none;
-}
-
 /* Worksの画像と説明部分（2個目） */
 .item_center {
     padding-right: 20px;
@@ -181,22 +143,63 @@ footer p {
     font-family: Noto Sans JP、sans-serif;
 }
 
+/*======== jQuery発展編ここから ========*/
+
+
+.item a:hover {
+    opacity: 0.8;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color:rgba(0, 0, 0, 0.8);
+}
+
+.bigimg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.close-btn {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    text-decoration: none;
+}
+
 .about {
     opacity: 0;
-    transform: translate(0, 50px);
-    transition: all 500ms;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity 1s, visibility 1s, transform 1s;
 }
 
 .works {
     opacity: 0;
-    transform: translate(0, 50px);
-    transition: all 500ms;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: opacity 1s, visibility 1s, transform 1s;
 }
 
-section.fadein {
+.fadein {
     opacity: 1;
-    transform: translate(0);
+    visibility: visible;
+    transform: translateX(0);
 }
+
 
 
 /* 横幅が767pxまでの場合 */
